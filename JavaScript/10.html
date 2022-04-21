@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<button onclick = 'show("Naveen")'>Click1</button>
+<button onclick = 'show("Raju")'>Click2</button>
+<button onclick = 'show("Ravi")'>Click3</button>
+
+<p id = "gm"></p>
+<script type = "text/javascript">
+      
+      function show(x){
+          window.location.href = '10.html?q='+x;
+      }
+      
+      //q = Naveen
+      //console.log(window.location.search);
+      //var param = newSearchParams(window.location.search);
+      //console.log(param.get('q'));
+
+      var name = new URLSearchParams(window.location.search).get('q');
+      document.getElementById('gm').innerHTML = name;
+         
+
+
+
+      var ar = ['Apple','Mango','Banana','Grapes','Kivi','Guava','Lemon','Litchi'];
+
+      console.log(ar);
+      ar.shift()
+
+      console.log(ar);
+
+      function letter(x){
+
+          //console.log(x);
+          console.log(x.indexOf('L'));
+          if(x.indexOf('G') == 0){
+
+                   return(x);
+            retrun(x);
+                
+          }
+      }
+
+      var arr = ar.filter(letter)
+
+      console.log(arr);
+
+</script>
+
+
+
+<button onclick = 'high("Naveen")'>Click1</button>
+<button onclick = 'high("Raju")'>Click2</button>
+<button onclick = 'high("Ravi")'>Click3</button>
+
+
+<p id = "ab"> </p>
+    <script type = "text/javascript">
+        function high(y){
+            window.location.href = '10.html?l='+y;
+        }
+    var name = new URLSearchParams(window.location.search).get('l');
+    document.getElementById('ab').innerHTML = name;
+
+    
+    
+    
+    console.log(Math.sign(3));
+    console.log(Math.sin(3));
+    console.log(Math.sinh(3));
+    console.log(Math.tan(1));
+    console.log(Math.tanh(1));
+    console.log(Math.cos(3));
+
+    console.log(Math.cosh(3));
+
+
+
+    </script>
+
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</html>

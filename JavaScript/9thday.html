@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <input type = "text" class="inp" placeholder="Name"><br>
+  <input type = "text" class="inp" placeholder="Email"><br>
+  <input type = "text" class="inp" placeholder="password"><br>
+  <input type = "text" class="inp" placeholder ="Contact"><br>
+
+  <button onclick = "abc()">Click</button>
+  <script type = "text/javascript">
+      function abc(){
+          var a = document.getElementsByClassName('inp');
+          for(var i = 0; i<a.length;i++){
+              console.log(a[i].value);
+          }
+      }
+  
+
+
+
+  
+
+</script>
+<script type = "text/javascript">
+    if(window.confirm("Press yes to continue")){
+        alert('yesss');
+    }
+    else{
+        alert('Nooo');
+    }
+</script> 
+<br>
+
+
+
+
+<input type = "text" id ="name" placeholder="Name">
+
+
+ <button onclick="abc()">Click</buttton>
+    <script type = "text" id = "name" placeholder="Name">
+       
+            function abc(){
+                document.getElementById('name').focus();
+            }
+    </script>
+
+
+
+    <input type = "text" id ="name" placeholder="Name">
+ <button onclick="abc()">Click</buttton>
+    <script type = "text" id = "name" placeholder="Name">
+       
+            function abc(){
+                document.getElementById('name').focus();
+            }
+    </script>
+
+    
+
+</body>
+</html>
