@@ -45,6 +45,15 @@
 </script>
 
 
+
+<button  onclick = "go('boy')">Click Done </button>
+<script type = "text/javascript">
+    function go(a1){
+        alert("Hello" + a1);
+    }
+</script>
+
+
 <button onclick = "bcd('Raaj')">Click3</button>
 <script type = "text/javascript">
     function bcd(name){
@@ -83,6 +92,21 @@
     function bolo(keep){
         alert('Hii'+keep);
     }
+</script>
+
+
+
+
+
+<input type = "text/javadcript" onkeyup="clickus(this.value)">
+<p id = "name1"></p>
+
+<script type = "text/javadcript" onkeyup = "clickus(this.value)">
+        function clickus(cd){
+            document.getElementById('name1').innerHTML = cd;
+        }
+
+
 </script>
 
 

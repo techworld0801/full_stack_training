@@ -11,7 +11,7 @@
 
 </head>
 <body>
-       
+
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -24,25 +24,50 @@
                 <li><a href="">Contact</a></li>
                 <li><a href="">Gallary</a></li>
             </ul>
- 
+        
+            
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="tasklogin.html">Login</a></li>
-                 <li><a href="">Register</a></li>
+              <!-- <li><a href="tasklogin.html">Login</a></li>  --> 
+                <li><a style="cursor:pointer;" data-toggle="modal" data-target="#mymodal1">Login</a></li>
             </ul>
         </div>
     </nav>
 
 
-
-
-
-
-
-
-
-
-
-
-
-    </body>
-    </html>
+    <!--<button data-toggle="modal" data-target="#mymodal1" class="btn btn-sm">Login Here</button>  -->
+<div class="modal fade" id="mymodal1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">x</button>
+         <h1>Welcome to our page</h1>
+      </div>
+      <div class="modal-body">
+        <center>
+            <div id ="login-form">
+                <div>
+                  <form>
+                      <input type = "text" name="" id ="email" placeholder="Enter your Email" pattern ="^[a-z]+[0-9]*[@](gmail|hotmail|yahoo)[.](com|org)">
+                      <br>
+                      <input type = "password" name="" id = "password" placeholder ="Enter your password" pattern="^[a-z][A-Z][0-9]">
+                      <br>
+                      <input type = "submit" value = "Login">
+                  </form>
+                    
+                    <!-- <button onclick = "login()">Login</button>  -->
+                </div>
+            </div>
+        <div id="logout-form">
+            <p id = "print"></p>
+                <button onclick="logout()">Logout</button>
+        </div>
+     </center>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
