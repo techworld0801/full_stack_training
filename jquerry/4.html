@@ -14,6 +14,11 @@
         width:100px;
         background: red;
     }
+    .ac{
+        height:100px;
+        width:100px;
+        background: green;
+    }
 </style>  
 </head>
   <body>
@@ -22,10 +27,45 @@
     <button id="clk3">down</button>
     <button id="clk4">toggle</button>
     <br>
-    
+    <button id="c21">See Here</button>
+      <button id="c22">Good To SEE</button>
+      
+      <button id = "c23">Good Boy</button>
+
+
+      <button id="id1n">Grow</button>
 
     </div>
+
+
+
     <script type = "text/javascript">
+        $(document).ready(function(){
+            $('#c23').click(function(){
+                $('#box1').toggle();
+            })
+        })
+       
+
+    </script>
+    <script type = "text/javascript">
+        $(document).ready(function(){
+            $('#c23').click(function(){
+                $('#box1').slidedown();
+            })
+        })
+
+
+$(document).ready(function(){
+
+                   $('#c21').click(function(){
+                       $('#box1').slideUp();
+                   })
+                   $('#c22').click(function(){
+                       $('#box1').slideDown();
+                   })
+               })
+
         $(document).ready(function(){
         $('#clk1').click(function(){
             alert('Hii');
@@ -40,9 +80,17 @@
             $('#box1').slideToggle();
         })
         })
+
+
+        $(document).ready(function(){
+            $('#id1n').click(function(){
+                $('#box2').slideUp();
+            })
+        })
     </script>
     <div class="ab" id ="box1">
-
+        <div class="ac" id = "box2"></div>
+                     
     </div>
   </body>
   </html>

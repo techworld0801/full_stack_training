@@ -11,9 +11,18 @@
 <button onclick = 'show("Raju")'>Click2</button>
 <button onclick = 'show("Ravi")'>Click3</button>
 
+
+
+
+
+
+
+
+
+
+
 <p id = "gm"></p>
 <script type = "text/javascript">
-      
       function show(x){
           window.location.href = '10.html?q='+x;
       }
@@ -26,7 +35,6 @@
       var name = new URLSearchParams(window.location.search).get('q');
       document.getElementById('gm').innerHTML = name;
          
-
 
 
       var ar = ['Apple','Mango','Banana','Grapes','Kivi','Guava','Lemon','Litchi'];
