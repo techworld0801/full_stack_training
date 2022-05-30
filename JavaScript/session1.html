@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -32,8 +32,31 @@
             </ul>
         </div>
     </nav>
-
-
+    <!--
+     <div class="modal fade" id = "mymodal1" role = "dialog">
+         <div class="modal-dialog">
+             <div class = "modal-content">
+                 <div class="modal-header">
+                     <button class="close" data-dismiss="modal">x</button>
+                     <h1>Welcome to our page</h1>
+                 </div>
+                 <div class="modal-body">
+                     <center>
+                         <div id ="login-form">
+                             <div>
+                                 <form>
+                                     <input type ="text" name ="" id="email"placeholder="Enter your Email" pattern = "^[a-z]+[0-9]*[@](gmail|hotmail|yahoo)[.](com|org)">
+                                     <br>
+                                     <input type = "submit" value = "Login">
+                                    </form>
+                             </div>
+                         </div>
+                     </center>
+                 </div>
+             </div>
+         </div>
+     </div>
+    -->
     <div class="modal fade" id="mymodal1" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -51,25 +74,16 @@
                            <!-- <input type = "password" name="" id = "password" placeholder ="Enter your password" pattern="^[a-z][A-Z][0-9]"> -->
                             <input type = "password" name="" id = "password" placeholder ="Enter your password">
                             <br>
-                            <input type = "submit" value = "Login">
+                            <input type = "button" onclick="login()" value = "Login">
                         </form>
                           
                           <!-- <button onclick = "login()">Login</button>  -->
                       </div>
-                  </div>
-              
-              
-              
-              
+                  </div>                 
               <div id="logout-form">
                   <p id = "print"></p>
-                      <button onclick="logout()">Logout</button>
-                                                                 
-      
-      
-      
-              </div>
-          
+                      <button onclick="logout()">Logout</button>    
+              </div>         
               </center>
             </div>
             <div class="modal-footer">
@@ -77,21 +91,7 @@
             </div>
           </div>
         </div>
-      </div>
-
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+      </div> 
    <!--
    
     <center>
@@ -112,6 +112,43 @@
     </center> 
 -->
 
+<script type ="text/javascript">
+    function login(){
+        var a = document.getElementById('email').value;
+        var b = document.getElementById('password').value;
+
+        if(a == ''){
+            alert('Please fill input Email');
+        }
+        else if(b == ''){
+            alert('Please fill input password');
+        }
+        else{
+            localStorage.setItem('UserEmail',a);
+            location.reload();
+        } //set get remove
+    }
+    var logins = localStorage.getItem('UserEmail');
+    function loginhandle(){
+        if(logins){
+            console.log('yes');
+            document.getElementById('login-form').style.display = none;
+            document.getElementById('logout-form').style.display = block;
+        }
+        else{
+            console.log('no');
+            document.getElementById('login-form').style.display = block;
+            document.getElementById('logout-form').style.display = none;
+        }
+    }
+    loginhandle()
+    function logout(){
+        localStorage.removeItem('UserEmail');
+        location.reload();
+    }
+</script>
+
+<!--
 
 
     <script type = "text/javascript">
@@ -143,28 +180,11 @@
             document.getElementById("logout-form").style.display = "none";
         }
     }
-
     loginhandle()
-
-    function logout(){
+function logout(){
         localStorage.removeItem('UserEmail');
         loaction.reload();
     }
-
-    </script>
-        
-
-
-       
-    
+    </script>  -->
 </body>
 </html>
-
-
-
-
-
-
-
-
-

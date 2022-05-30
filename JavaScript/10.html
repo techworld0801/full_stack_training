@@ -6,25 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<body>
 <button onclick = 'show("Naveen")'>Click1</button>
 <button onclick = 'show("Raju")'>Click2</button>
 <button onclick = 'show("Ravi")'>Click3</button>
 
-
-
-
-
-
-
-
-
-
-
 <p id = "gm"></p>
 <script type = "text/javascript">
       function show(x){
-          window.location.href = '10.html?q='+x;
+          window.location.href = '10.html?q='+x; //we put our data in href of  our file name 10.html in URL with click of button having show as a function 
+          //and x as a parameter. 
       }
       
       //q = Naveen
@@ -32,79 +23,35 @@
       //var param = newSearchParams(window.location.search);
       //console.log(param.get('q'));
 
-      var name = new URLSearchParams(window.location.search).get('q');
-      document.getElementById('gm').innerHTML = name;
-         
+      var name22 = new URLSearchParams(window.location.search).get('q');//we fetch data using URLSearchParams(window.location.search) 
+      //our data name is q , using get we fetch our data q and store it in variable name.
+      document.getElementById('gm').innerHTML = name22;
+    </script>     
+     <script>
+     var ar = ['Apple','Mango','Banana','Grapes','Kivi','Guava','Lemon','Litchi'];
+     
+    //   console.log(ar);
+    //   ar.shift()
+
+    //   console.log(ar);
 
 
-      var ar = ['Apple','Mango','Banana','Grapes','Kivi','Guava','Lemon','Litchi'];
-
-      console.log(ar);
-      ar.shift()
-
-      console.log(ar);
 
       function letter(x){
 
           //console.log(x);
-          console.log(x.indexOf('L'));
-          if(x.indexOf('G') == 0){
+         console.log(x.indexOf('A'));
+          if(x.indexOf('A') == 0){
 
-                   return(x);
-           
-                
+                   return(x);            
           }
       }
-
       var arr = ar.filter(letter)
-
       console.log(arr);
-
-</script>
-
-
-
-<button onclick = 'high("Naveen")'>Click1</button>
-<button onclick = 'high("Raju")'>Click2</button>
-<button onclick = 'high("Ravi")'>Click3</button>
-
-
-<p id = "ab"> </p>
-    <script type = "text/javascript">
-        function high(y){
-            window.location.href = '10.html?l='+y;
-        }
-    var name = new URLSearchParams(window.location.search).get('l');
-    document.getElementById('ab').innerHTML = name;
-
-    
-    
-    
-    console.log(Math.sign(3));
-    console.log(Math.sin(3));
-    console.log(Math.sinh(3));
-    console.log(Math.tan(1));
-    console.log(Math.tanh(1));
-    console.log(Math.cos(3));
-
-    console.log(Math.cosh(3));
-
-
+      //array get run 
+      //then we filter our data using filter
+      //filter took letter function as an argument 
+      //letter will store that in x
 
     </script>
-
-    
-
-
-
-
-
-
-
-  
-
-
-
-
-
 </html>
